@@ -1,15 +1,29 @@
-<!doctype html>
-<html lang='ja'>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <title>PyScript-Work</title>
 
     <!-- 公式ページから Download して指定する方法もあるが -->
     <!-- `pyscript.css` や `pyscript.ks` がみつからなかったので CDN を利用する -->
     <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
   </head>
+
+  <!--
+    チュートリアル:
+    https://docs.pyscript.net/latest/tutorials/getting-started.html
+  -->
   <body>
-    <py-script> print('Hello, World!') </py-script>
+    Hello world! <br>
+    This is the current date and time, as computed by Python:
+    <py-script>
+from datetime import datetime
+now = datetime.now()
+now.strftime("%m/%d/%Y, %H:%M:%S")
+    </py-script>
   </body>
 </html>
 
